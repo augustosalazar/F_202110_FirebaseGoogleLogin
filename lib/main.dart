@@ -1,3 +1,4 @@
+import 'package:f_202110_firebase_google_login/firebase/firebase_central.dart';
 import 'package:f_202110_firebase_google_login/google/google_central.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
             return Wrong();
           }
           if (snapshot.connectionState == ConnectionState.done) {
-            return GoogleCentral();
+            //return GoogleCentral();
+            return FirebaseCentral();
           }
 
           return Loading();
